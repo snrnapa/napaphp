@@ -25,9 +25,53 @@ if (!isset($row['email'])) {
 //パスワード確認後sessionにメールアドレスを渡す
 if (password_verify($_POST['password'], $row['password'])) {
   session_regenerate_id(true); //session_idを新しく生成し、置き換える
-  $_SESSION['EMAIL'] = $row['email'];
+  $_SESSION['email'] = $row['email'];
   echo 'ログインしました';
+  echo '<a href="index.php">トップ画面に戻ります</a>';
+
+  echo $_POST['email'];
+
 } else {
   echo 'メールアドレス又はパスワードが間違っています。';
   return false;
 }
+
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html> -->
+

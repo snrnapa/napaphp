@@ -1,21 +1,35 @@
 <?php
-function h($s){
-    return htmlspecialchars($s,ENT_QUOTES, 'utf-8');
 
-}
+
+
 
 session_start();
 // ログイン済みの場合
 
-if(isset($_session['email'])){
+// $_login_email = $_SESSION['email'];
+
+if(isset($_SESSION['email'])){
+
+// if(isset($_login_email){
     // 変数emailに値が代入されており、なおかつnullではない場合にtrueを返す関数である
 
-    echo 'ようこそ' .  h($_session['email']) . "さん<br>";
+    echo 'ようこそ<br>' .  h($_SESSION['email']) . "<br>さん<br>";
 
     echo "<a href='/logout.php'>ログアウトはこちら。</a>";
 
     exit;
 }
+
+
+function h($s){
+    return htmlspecialchars($s,ENT_QUOTES, 'utf-8');
+}
+
+
+
+
+
+
 
 ?>
 
