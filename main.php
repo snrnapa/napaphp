@@ -10,6 +10,7 @@ session_start();
 
 if(isset($_SESSION['email'])){
 
+// if(isset($_login_email){
     // 変数emailに値が代入されており、なおかつnullではない場合にtrueを返す関数である
 
     echo 'ようこそ<br>' .  h($_SESSION['email']) . "<br>さん<br>";
@@ -44,42 +45,32 @@ function h($s){
         <title>LoginPage</title>
         <!-- <link rel="stylesheet" href="style.css" type="text/css"> -->
         <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-        <link rel="stylesheet" href="css/style.css" type="text/css">
+        <link rel="stylesheet" href="style.css" type="text/css">
 
 
     </head>
     <body>
 
 
-        <div class="main_title">Welcom to Napa's Page</div>
+        <div class="main_title">Napa's system</div>
+
+        <h1 class="login_title">hello world!! ログインをしてください！</h1>
 
 
-
-        <form action="login.php"  method="post">
-
-            <h1 class="login_title">hello world</h1>
-
-
-            <div class="form-group napaform">
-                <input type="email" name="email" 
-                class="form-control napaform" 
-                id="formGroupExampleInput" 
-                placeholder="Input your email adress">
-
+        <form action="login.php" method="post">
+            <div class="form-group">
+                <label for="email">Your Email adress</label>
+                <input type="email" name="email" class="form-control" id="formGroupExampleInput" placeholder="Input your email adress">
             </div>
-            <div class="form-group,napaform">
-                <!-- <label for="password">Input Password</label> -->
-                <input type="password" name="password" 
-                class="form-control napaform" id="formGroupExampleInput2" placeholder="Password">
+        
+            <div class="form-group">
+                <label for="password">Input Password</label>
+                <input type="password" name="password" class="form-control" id="formGroupExampleInput2" placeholder="Password">
             </div>
 
             <button style=
             "margin-top: 20px;"
              type="submit" class="btn btn-primary">Sign In</button>
-
-             <a class="forget" href="fotget.php">Forget Your password?</a>
-
-
         </form>
 
 
