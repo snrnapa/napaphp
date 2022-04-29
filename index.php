@@ -46,6 +46,16 @@ function h($s){
         <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
         <link rel="stylesheet" href="css/style.css" type="text/css">
 
+        <script src="./jquery-3.6.0.min.js"></script>
+        <script src="js/bootstrap.bundle.js"></script>
+
+        <script>
+            $(function(){
+                alert('CookHub用のログイン画面です');
+            });
+        </script>
+
+
 
     </head>
     <body>
@@ -55,7 +65,7 @@ function h($s){
 
 
 
-        <form action="login.php"  method="post">
+        <form class="mainform" action="login.php"  method="post">
 
             <h1 class="login_title">hello world</h1>
 
@@ -67,7 +77,7 @@ function h($s){
                 placeholder="Input your email adress">
 
             </div>
-            <div class="form-group,napaform">
+            <div class="form-group napaform">
                 <!-- <label for="password">Input Password</label> -->
                 <input type="password" name="password" 
                 class="form-control napaform" id="formGroupExampleInput2" placeholder="Password">
@@ -80,9 +90,41 @@ function h($s){
              <a class="forget" href="fotget.php">Forget Your password?</a>
 
 
+
+
+
         </form>
 
 
+    
+        <form action="signup.php" method="post" style="margin-left: 40px;">
+            <div class="dropdown napadd">
+                <button class="btn btn-secondary dropdown-toggle napadd" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                New_comer(Create_account)</button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li>
+                        <input type="email" name="email" 
+                        class="form-control napaform" 
+                        id="formGroupExampleInput" 
+                        placeholder="Input your email adress">
+
+                    </li>
+                    <li>
+                        <input type="password" name="password" 
+                        class="form-control napaform" id="formGroupExampleInput2" placeholder="Password">
+                    </li>
+                    
+                    <li>
+
+                    <button style="margin-top: 20px;"type="submit" class="btn btn-primary">Create</button>
+
+
+
+
+
+
+                    </li>
+            </div>
 
 
 
@@ -90,15 +132,20 @@ function h($s){
 
 
 
-        <h1 class="title" style="margin-top: 100px;">初めての方はこちら（アカウント作成）</h1>
-        <form action="signup.php" method="post">
 
-            <label for="email">email</label>
-            <input type="email" name="email">
-            <label for="password">password</label>
-            <input type="password" name="password">
-            <button type="submit">Sign In!!!</button>
-            <p>※パスワードは半角英数字をそれぞれ１文字以上含んだ、８文字以上で設定してください。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         </form>
 

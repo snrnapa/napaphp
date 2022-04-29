@@ -5,11 +5,12 @@
 body{
     background: #2c3338;
     color: #606468;
+    height: 700px;
 }
 
 
 
-form{
+form.mainform{
     display: block;
     background-color: rgba(93, 94, 94, 0.8);
     width: 60%;
@@ -17,7 +18,7 @@ form{
     margin: auto;
     border-radius: 10px;
     height: 300px;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 
@@ -50,7 +51,7 @@ div.main_title{
 }
 
 h1.login_title{
-
+    
     padding-top: 20px;
     margin-top: 20px;
     font-size: 30px;
@@ -67,8 +68,26 @@ h1.login_title{
     font-weight: lighter;
     margin-left: 20px;
     text-align: left;
+    text-decoration: none;
 }
 
 
 
+p.login_title{
+    font-size: 20px;
+    font-weight: lighter;
+    color: white;
 
+
+
+}
+
+.napadd{
+    margin-top: 10px;
+}
+
+
+ul.dropdown-menu.show{
+    background-color: rgba(93, 94, 94, 0.8);
+    width: 500px;
+}
